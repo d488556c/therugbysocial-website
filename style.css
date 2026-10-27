@@ -29,7 +29,7 @@ body {
 a { color: var(--amber); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-img { max-width: 100%; height: auto; display: block; }
+img { max-width: 100%; display: block; }
 
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
 
@@ -193,6 +193,17 @@ h2 {
 .faq details[open] summary::after { content: "–"; }
 .faq details p { margin: 10px 0 0; }
 
+/* Demo video */
+.demo { display: grid; grid-template-columns: 340px 1fr; gap: 64px; align-items: center; }
+.demo-video { width: 100%; }
+.demo-video video {
+  display: block; width: 100%; height: auto; aspect-ratio: 9 / 16;
+  border-radius: 28px; background: #000;
+  border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+.demo-copy .section-lede { margin-bottom: 18px; }
+.demo-note { color: var(--ink-faint); font-size: 15px; margin: 0; }
+
 /* Footer */
 .site-footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--ink-faint); font-size: 14px; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
@@ -204,6 +215,9 @@ h2 {
   .hero-art { width: min(300px, 80%); }
   .features { grid-template-columns: 1fr; }
   .company { grid-template-columns: 1fr; gap: 28px; }
+  .demo { grid-template-columns: 1fr; gap: 28px; }
+  .demo-copy { order: -1; }
+  .demo-video { justify-self: center; width: min(320px, 85%); }
   section { padding: 64px 0; }
 }
 @media (max-width: 480px) {
